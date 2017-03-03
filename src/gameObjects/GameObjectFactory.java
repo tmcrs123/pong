@@ -1,7 +1,6 @@
 package gameObjects;
 
 import Interfaces.MovableRepresentable;
-import Interfaces.Representable;
 import Interfaces.RepresentableFactory;
 
 /**
@@ -25,11 +24,11 @@ public class GameObjectFactory {
             case BALL:
                 gameObject = new Ball((MovableRepresentable) factory.createRepresentation(gameObjectType));
                 break;
-            case PADDLE:
-                gameObject = new Paddle((MovableRepresentable) factory.createRepresentation(gameObjectType));
+            case HUMANPADDLE:
+                gameObject = new HumanPaddle((MovableRepresentable) factory.createRepresentation(gameObjectType));
                 break;
             case AIPADDLE:
-                gameObject = new Paddle((MovableRepresentable) factory.createRepresentation(gameObjectType));
+                gameObject = new AIPaddle((MovableRepresentable) factory.createRepresentation(gameObjectType));
                 break;
             case FIELD:
                 gameObject = new Field(factory.createRepresentation(gameObjectType));

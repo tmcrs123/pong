@@ -1,8 +1,12 @@
 
 package KeyboardController;
 
+import Interfaces.MovableRepresentable;
+import Interfaces.VerticalRepresentable;
+import SimpleGFX.SimpleGFXHumanPaddle;
 import gameObjects.Field;
-import gameObjects.Paddle;
+import gameObjects.HumanPaddle;
+import gameObjects.MovableGameObject;
 import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
@@ -14,18 +18,17 @@ import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
     public class KeyboardController implements KeyboardHandler {
 
 
-        private Paddle controlablePaddle;
+        private HumanPaddle controllableHumanPaddle;
         private Field field;
         private Keyboard keyboard;
 
 
-        public KeyboardController(Paddle paddle , Field field) {
+        public KeyboardController(HumanPaddle humanPaddle, Field field) {
 
             keyboard = new Keyboard(this);
             this.keyboard();
-            this.controlablePaddle = paddle;
+            this.controllableHumanPaddle = humanPaddle;
             this.field = field;
-
 
         }
 
@@ -41,6 +44,18 @@ import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
             down.setKey(KeyboardEvent.KEY_DOWN);
             down.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
             keyboard.addEventListener(down);
+
+            KeyboardEvent releaseUp = new KeyboardEvent();
+            releaseUp.setKey(KeyboardEvent.KEY_UP);
+            releaseUp.setKeyboardEventType(KeyboardEventType.KEY_RELEASED);
+            keyboard.addEventListener(releaseUp);
+
+            KeyboardEvent releaseDown = new KeyboardEvent();
+            releaseDown.setKey(KeyboardEvent.KEY_DOWN);
+            releaseDown.setKeyboardEventType(KeyboardEventType.KEY_RELEASED);
+            keyboard.addEventListener(releaseDown);
+
+
         }
 
         @Override
@@ -50,21 +65,34 @@ import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
 
             switch (keyboardEvent.getKey()){
                 case KeyboardEvent.KEY_UP:
-                    if (controlablePaddle.getRepresentable().getY() >0) {
-                        System.out.println(controlablePaddle.getPositionY());
-                        controlablePaddle.move(0, -controlablePaddle.getPaddleSpeed());
-                        controlablePaddle.setPositionY(controlablePaddle.getPositionY() - controlablePaddle.getPaddleSpeed());
-                        controlablePaddle.getRepresentable().setPosY(controlablePaddle.getPositionY());
-                        //System.out.println("pressed up");
-                    }
+
+                    //this returns a representable
+                    ((VerticalRepresentable)controllableHumanPaddle.getRepresentable()).setMovingUp(true);
+                    System.out.println(controllableHumanPaddle.getPositionY());
+                    System.out.println(controllableHumanPaddle.getPaddleSpeed());
+                    controllableHumanPaddle.setPositionY(controllableHumanPaddle.getPositionY() - controllableHumanPaddle.getPaddleSpeed());
+                    System.out.println(controllableHumanPaddle.getPositionY());
+
+
+
+
+
+//                    if (controllableHumanPaddle.getRepresentable().getY() >0) {
+//                        System.out.println(controllableHumanPaddle.getPositionY());
+//                        controllableHumanPaddle.move(0, -controllableHumanPaddle.getPaddleSpeed());
+//                        controllableHumanPaddle.setPositionY(controllableHumanPaddle.getPositionY() - controllableHumanPaddle.getPaddleSpeed());
+//                        controllableHumanPaddle.getRepresentable().setPosY(controllableHumanPaddle.getPositionY());
+//                        System.out.println("pressed up");
+//                    }break;
                     break;
                 case KeyboardEvent.KEY_DOWN:
-                    if (controlablePaddle.getRepresentable().getY()+controlablePaddle.getRepresentable().getHeigth()<= field.getRepresentable().getHeigth()) {
-                    controlablePaddle.move(0, controlablePaddle.getPaddleSpeed());
-                    controlablePaddle.setPositionY(controlablePaddle.getPositionY() + controlablePaddle.getPaddleSpeed());
-                    controlablePaddle.getRepresentable().setPosY(controlablePaddle.getPositionY());
-                    //System.out.println("pressed down");
-                    }
+                    ((VerticalRepresentable)controllableHumanPaddle.getRepresentable()).setMovingDown(true);
+//                    if (controllableHumanPaddle.getRepresentable().getY()+ controllableHumanPaddle.getRepresentable().getHeigth()<= field.getRepresentable().getHeigth()) {
+//                    controllableHumanPaddle.move(0, controllableHumanPaddle.getPaddleSpeed());
+//                    controllableHumanPaddle.setPositionY(controllableHumanPaddle.getPositionY() + controllableHumanPaddle.getPaddleSpeed());
+//                    controllableHumanPaddle.getRepresentable().setPosY(controllableHumanPaddle.getPositionY());
+//                    System.out.println("pressed down");
+//                    }
                     break;
                 default:
                     System.out.println("Shit happened");
@@ -77,5 +105,24 @@ import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
         @Override
         public void keyReleased(KeyboardEvent keyboardEvent) {
 
+            SimpleGFXHumanPaddle humanPaddle = (SimpleGFXHumanPaddle) controllableHumanPaddle.getRepresentable();
+
+            switch (keyboardEvent.getKey()){
+
+                case KeyboardEvent.KEY_UP:
+                    humanPaddle.setMovingUp(false);
+                    controllableHumanPaddle.setPositionY(humanPaddle.getY());
+                    break;
+
+                case KeyboardEvent.KEY_DOWN:
+                    humanPaddle.setMovingDown(false);
+                    controllableHumanPaddle.setPositionY(humanPaddle.getY());
+                    break;
+
+                default:
+                    System.out.println("shit");
+            }
+
         }
+
     }

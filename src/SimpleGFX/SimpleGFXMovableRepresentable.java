@@ -2,6 +2,7 @@ package SimpleGFX;
 
 import Interfaces.MovableRepresentable;
 import Interfaces.Representable;
+import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.graphics.Shape;
 
 /**
@@ -14,6 +15,7 @@ public abstract class SimpleGFXMovableRepresentable extends SimpleGFXRepresentab
     public SimpleGFXMovableRepresentable(Shape shape) {
         super(shape);
     }
+
 
     @Override
     public Shape getShape() {

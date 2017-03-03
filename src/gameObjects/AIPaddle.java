@@ -5,11 +5,11 @@ import Interfaces.MovableRepresentable;
 /**
  * Created by tiagoRodrigues on 02/02/2017.
  */
-public class Paddle extends MovableGameObject{
+public class AIPaddle extends MovableGameObject{
 
-    private int paddleSpeed = 20;
+    private int paddleSpeed = 2;
 
-    public Paddle(MovableRepresentable representable) {
+    public AIPaddle(MovableRepresentable representable) {
         super(representable);
     }
 

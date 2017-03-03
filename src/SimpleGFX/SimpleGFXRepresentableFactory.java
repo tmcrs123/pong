@@ -21,7 +21,7 @@ public class SimpleGFXRepresentableFactory implements RepresentableFactory {
             case BALL:
                 representable = new SimpleGFXBall(300, 220, 16, 16);
                 break;
-            case PADDLE:
+            case HUMANPADDLE:
                 representable = new SimpleGFXHumanPaddle(20, 0, 15, 100);
                 break;
             case AIPADDLE:

@@ -5,7 +5,7 @@ package gameObjects;
  */
 public enum GameObjectType {
 
-    PADDLE,
+    HUMANPADDLE,
     AIPADDLE,
     BALL,
     FIELD

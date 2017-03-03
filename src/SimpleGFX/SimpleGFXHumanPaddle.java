@@ -1,5 +1,6 @@
 package SimpleGFX;
 
+import Interfaces.VerticalRepresentable;
 import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.graphics.Shape;
@@ -7,10 +8,12 @@ import org.academiadecodigo.simplegraphics.graphics.Shape;
 /**
  * Created by tiagoRodrigues on 02/03/2017.
  */
-public class SimpleGFXHumanPaddle extends SimpleGFXMovableRepresentable{
+public class SimpleGFXHumanPaddle extends SimpleGFXMovableRepresentable implements VerticalRepresentable{
 
-    private boolean movingUp;
-    private boolean movingDown;
+    private boolean movingUp = false;
+    private boolean movingDown = false;
+    private int speed = 2;
+    private double gravity = 0.94;
 
     public SimpleGFXHumanPaddle(int x, int y, int width, int height) {
         super(new Rectangle(x, y, width, height));
@@ -25,6 +28,20 @@ public class SimpleGFXHumanPaddle extends SimpleGFXMovableRepresentable{
     @Override
     public void move(double dx, double dy) {
 
+//        System.out.println("human paddle x" + this.getX());
+//System.out.println("human paddle y" + this.getY());
+        //System.out.println(this.posY);
+
+        if (movingUp){
+            ((Rectangle) this.getShape()).translate(0, -dy);
+            this.setPosY(getY()-dy);
+        } else if(movingDown){
+            ((Rectangle) this.getShape()).translate(0, dy);
+            this.setPosY(getY()+dy);
+        }
+
+
+
     }
 
     public boolean isMovingUp() {
@@ -35,11 +52,15 @@ public class SimpleGFXHumanPaddle extends SimpleGFXMovableRepresentable{
         return movingDown;
     }
 
-    public void setMovingUp(boolean movingUp) {
-        this.movingUp = movingUp;
+    public void setMovingUp(boolean up) {
+        this.movingUp = up;
     }
 
-    public void setMovingDown(boolean movingDown) {
-        this.movingDown = movingDown;
+    public void setMovingDown(boolean down) {
+            this.movingDown = down;
+    }
+
+    public int getSpeed() {
+        return speed;
     }
 }
