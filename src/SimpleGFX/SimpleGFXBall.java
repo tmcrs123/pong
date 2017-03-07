@@ -10,6 +10,7 @@ public class SimpleGFXBall extends SimpleGFXMovableRepresentable {
 
 
 
+
     public SimpleGFXBall(int x, int y, int width, int height) {
         super(new Ellipse(x, y, width, height));
         this.width = width;
@@ -27,6 +28,8 @@ public class SimpleGFXBall extends SimpleGFXMovableRepresentable {
         this.setPosY(getY() + dy);
         this.setPosX(getX() + dx);
     }
+
+
 }
 
 

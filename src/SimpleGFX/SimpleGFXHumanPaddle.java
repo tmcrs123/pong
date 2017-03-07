@@ -1,6 +1,7 @@
 package SimpleGFX;
 
 import Interfaces.VerticalRepresentable;
+import gameObjects.Field;
 import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.graphics.Shape;
@@ -12,8 +13,9 @@ public class SimpleGFXHumanPaddle extends SimpleGFXMovableRepresentable implemen
 
     private boolean movingUp = false;
     private boolean movingDown = false;
-    private int speed = 2;
-    private double gravity = 0.94;
+    private boolean canMoveup;
+    private boolean canMovedown;
+
 
     public SimpleGFXHumanPaddle(int x, int y, int width, int height) {
         super(new Rectangle(x, y, width, height));
@@ -60,7 +62,4 @@ public class SimpleGFXHumanPaddle extends SimpleGFXMovableRepresentable implemen
             this.movingDown = down;
     }
 
-    public int getSpeed() {
-        return speed;
-    }
 }

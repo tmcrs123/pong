@@ -66,33 +66,14 @@ import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
             switch (keyboardEvent.getKey()){
                 case KeyboardEvent.KEY_UP:
 
+
                     //this returns a representable
                     ((VerticalRepresentable)controllableHumanPaddle.getRepresentable()).setMovingUp(true);
-                    System.out.println(controllableHumanPaddle.getPositionY());
-                    System.out.println(controllableHumanPaddle.getPaddleSpeed());
-                    controllableHumanPaddle.setPositionY(controllableHumanPaddle.getPositionY() - controllableHumanPaddle.getPaddleSpeed());
-                    System.out.println(controllableHumanPaddle.getPositionY());
 
 
-
-
-
-//                    if (controllableHumanPaddle.getRepresentable().getY() >0) {
-//                        System.out.println(controllableHumanPaddle.getPositionY());
-//                        controllableHumanPaddle.move(0, -controllableHumanPaddle.getPaddleSpeed());
-//                        controllableHumanPaddle.setPositionY(controllableHumanPaddle.getPositionY() - controllableHumanPaddle.getPaddleSpeed());
-//                        controllableHumanPaddle.getRepresentable().setPosY(controllableHumanPaddle.getPositionY());
-//                        System.out.println("pressed up");
-//                    }break;
                     break;
                 case KeyboardEvent.KEY_DOWN:
                     ((VerticalRepresentable)controllableHumanPaddle.getRepresentable()).setMovingDown(true);
-//                    if (controllableHumanPaddle.getRepresentable().getY()+ controllableHumanPaddle.getRepresentable().getHeigth()<= field.getRepresentable().getHeigth()) {
-//                    controllableHumanPaddle.move(0, controllableHumanPaddle.getPaddleSpeed());
-//                    controllableHumanPaddle.setPositionY(controllableHumanPaddle.getPositionY() + controllableHumanPaddle.getPaddleSpeed());
-//                    controllableHumanPaddle.getRepresentable().setPosY(controllableHumanPaddle.getPositionY());
-//                    System.out.println("pressed down");
-//                    }
                     break;
                 default:
                     System.out.println("Shit happened");

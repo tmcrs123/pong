@@ -10,6 +10,7 @@ public class SimpleGFXAIPaddle extends SimpleGFXMovableRepresentable{
 
 
 
+
         public SimpleGFXAIPaddle(int x, int y, int width, int height) {
             super(new Rectangle(x, y, width, height));
             ((Rectangle) this.getShape()).fill();

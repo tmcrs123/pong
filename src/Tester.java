@@ -22,10 +22,11 @@ public class Tester {
 
         KeyboardController cenas = new KeyboardController(((HumanPaddle) humanPaddle), ((Field) field));
 
+
         while (true){
             try {
 
-                int speed = ((HumanPaddle) humanPaddle).getPaddleSpeed();
+                int speed = 1;
                 ((HumanPaddle) humanPaddle).move(0,speed);
                 sleep(10);
             } catch (InterruptedException e) {

@@ -10,6 +10,7 @@ public class Field extends GameObject {
 
     public Field(Representable representable) {
         super(representable);
+
     }
 
 

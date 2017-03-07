@@ -1,4 +1,5 @@
 import Interfaces.RepresentableFactory;
+import Interfaces.VerticalRepresentable;
 import KeyboardController.KeyboardController;
 import gameObjects.*;
 
@@ -12,10 +13,10 @@ public class Pong {
     private GameObject AIpaddle;
     private GameObject ball;
     private KeyboardController cenas;
+    public static int fieldHeigth;
     double ballSpeedX;
     double ballSpeedY;
     int paddleSpeed;
-    int counter;
 
 
     public void init(RepresentableFactory representableFactory){
@@ -23,6 +24,7 @@ public class Pong {
 
         //create field
         field = new GameObjectFactory(representableFactory).createGameObject(GameObjectType.FIELD);
+        fieldHeigth = field.getRepresentable().getHeigth();
 
         //create the human humanPaddle
         humanPaddle = new GameObjectFactory(representableFactory).createGameObject(GameObjectType.HUMANPADDLE);
@@ -34,7 +36,7 @@ public class Pong {
         ball = new GameObjectFactory(representableFactory).createGameObject(GameObjectType.BALL);
 
 
-        cenas = new KeyboardController((HumanPaddle) humanPaddle, ((Field) field));
+        cenas = new KeyboardController(((HumanPaddle) humanPaddle), ((Field) field));
 
         ballSpeedY = ((Ball)ball).getBallSpeed();
         ballSpeedX = ((Ball)ball).getBallSpeed();
@@ -45,15 +47,15 @@ public class Pong {
 
     public void start(){
 
-        System.out.println("human paddle object Y " + humanPaddle.getPositionY());
-        System.out.println("human representation Y " + humanPaddle.getRepresentable().getY());
 
 
         checkCollisions(humanPaddle);
         checkCollisionsAIPaddle(AIpaddle);
         setBallY();
         ((MovableGameObject) ball).move(ballSpeedX,ballSpeedY);
+        checkfieldLimits();
         moveAIPaddle();
+        ((HumanPaddle)humanPaddle).move(0,paddleSpeed);
 
 
 
@@ -62,20 +64,12 @@ public class Pong {
 
     public void setBallY(){
 
-        int fieldWidth = field.getRepresentable().getWidth();
         int fieldHeigth =  field.getRepresentable().getHeigth();
 
 
-
-        double currentBallX = ball.getRepresentable().getX()+ball.getRepresentable().getWidth();
         double currentBallY = ball.getRepresentable().getY()+ball.getRepresentable().getHeigth()/2;
 
 
-
-
-        //System.out.println("ball true y: " + ball.getRepresentable().getY());
-        //System.out.println("ball y : " + currentBallY);
-        //System.out.println("ball x: " + currentBallX);
 
 
         //TODO don't need left and right limits, its the humanPaddle. Set ball speed to zero when it reaches them
@@ -177,10 +171,14 @@ public class Pong {
 //        System.out.println(field.getRepresentable().getHeigth()-ball.getRepresentable().getHeigth());
 
 
+        if (AIpaddleBottomY > fieldHeigth){
+            ((MovableGameObject)AIpaddle).move(0, 0);
+            return;
+        }
+
         //If bottom field limit move up
         if (((int)ball.getRepresentable().getY() >= (field.getRepresentable().getHeigth()-ball.getRepresentable().getHeigth()))){
             ((MovableGameObject)AIpaddle).move(0, 0);
-//            System.out.println("------HERE-------");
             return;
         }
 
@@ -211,6 +209,22 @@ public class Pong {
         }
 
 
+    }
+
+    public void checkfieldLimits(){
+
+        //System.out.println(humanPaddle.getPositionY());
+
+
+        if (humanPaddle.getRepresentable().getY()<0){
+            ((VerticalRepresentable)humanPaddle.getRepresentable()).setMovingUp(false);
+        }
+
+        if (humanPaddle.getRepresentable().getY()+humanPaddle.getRepresentable().getHeigth()>fieldHeigth){
+            ((VerticalRepresentable)humanPaddle.getRepresentable()).setMovingDown(false);
+        }
+
+        ((HumanPaddle)humanPaddle).move(0,paddleSpeed);
     }
 
 }

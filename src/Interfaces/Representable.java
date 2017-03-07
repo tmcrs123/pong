@@ -12,6 +12,8 @@ public interface Representable {
     int getWidth();
     int getHeigth();
 
+    //todo check for usage of getX and getY and see if I can replace by child cclass methods PositionXY methods
+
 
 
 }
