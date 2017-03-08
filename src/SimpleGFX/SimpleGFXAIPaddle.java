@@ -8,8 +8,7 @@ import org.academiadecodigo.simplegraphics.graphics.Rectangle;
  */
 public class SimpleGFXAIPaddle extends SimpleGFXMovableRepresentable{
 
-
-
+    boolean moveAllowed = true;
 
         public SimpleGFXAIPaddle(int x, int y, int width, int height) {
             super(new Rectangle(x, y, width, height));
@@ -24,12 +23,20 @@ public class SimpleGFXAIPaddle extends SimpleGFXMovableRepresentable{
 
     @Override
     public void move(double dx, double dy) {
-        ((Rectangle) this.getShape()).translate(0, dy);
-        this.setPosY(getY()+dy);
-        this.setPosX(getX()+dx);
 
+        if (moveAllowed) {
+            ((Rectangle) this.getShape()).translate(0, dy);
+            this.setPosY(getY() + dy);
+            this.setPosX(getX() + dx);
+        }
     }
 
+    public boolean isMoveAllowed() {
+        return moveAllowed;
+    }
 
+    public void setMoveAllowed(boolean moveAllowed) {
+        this.moveAllowed = moveAllowed;
+    }
 }
 

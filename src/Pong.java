@@ -17,6 +17,7 @@ public class Pong {
     double ballSpeedX;
     double ballSpeedY;
     int paddleSpeed;
+    boolean moveAllowed = true;
 
 
     public void init(RepresentableFactory representableFactory){
@@ -165,33 +166,40 @@ public class Pong {
         double AIpaddleBottomY = AIpaddle.getRepresentable().getY()+AIpaddle.getRepresentable().getHeigth();
         double AIpaddleTopY = AIpaddle.getRepresentable().getY();
 
+        //todo try something like boolean value like in human paddle
+
 //        System.out.println("Field heigth"+ field.getRepresentable().getHeigth());
 //        System.out.println("Current ball Y" + ball.getRepresentable().getY());
 //        System.out.println(ball.getRepresentable().getHeigth());
 //        System.out.println(field.getRepresentable().getHeigth()-ball.getRepresentable().getHeigth());
 
+//        if (AIpaddleTopY < 0){
+//            //((MovableGameObject)AIpaddle).move(0, 0);
+//            AIpaddle.setPositionY(0);
+//        }
 
-        if (AIpaddleBottomY > fieldHeigth){
-            ((MovableGameObject)AIpaddle).move(0, 0);
-            return;
-        }
 
-        //If bottom field limit move up
-        if (((int)ball.getRepresentable().getY() >= (field.getRepresentable().getHeigth()-ball.getRepresentable().getHeigth()))){
-            ((MovableGameObject)AIpaddle).move(0, 0);
-            return;
-        }
 
-       //if humanPaddle is in upper field limit down
-        if (AIpaddle.getRepresentable().getY() == 0){
-            ((MovableGameObject)AIpaddle).move(0, 1);
-            return;
-        }
+
+//        //If bottom field limit move up
+//        if (((int)ball.getRepresentable().getY() >= (field.getRepresentable().getHeigth()-ball.getRepresentable().getHeigth()))){
+//            ((MovableGameObject)AIpaddle).move(0, 0);
+//            return;
+//        }
+//
+//       //if humanPaddle is in upper field limit down
+//        if (AIpaddle.getRepresentable().getY() == 0){
+//            ((MovableGameObject)AIpaddle).move(0, 1);
+//            return;
+//        }
 
 
 //        if (ball.getRepresentable().getY()+ball.getRepresentable().getHeigth()/2 < AIpaddleBottomY && ball.getRepresentable().getY()+ball.getRepresentable().getHeigth()/2 > AIpaddleTopY){
 //            return;
 //        }
+        System.out.println("ball y is " +(int) ball.getRepresentable().getY());
+        System.out.println("AIpaddle Top is " + AIpaddleTopY);
+        System.out.println("subtraction is " + (int) (ball.getRepresentable().getY()-AIpaddleTopY));
 
 
         //        do not move if the center of the ball is not far enough from the center of the paddlea
@@ -199,14 +207,31 @@ public class Pong {
             return;
         }
 
+//        int ballCenter = ((int)ball.getRepresentable().getY()+ball.getRepresentable().getHeigth()/2);
+//        double diffToCenter = ballCenter - AIpaddleCenterY;
+//
+//        if (ballCenter != AIpaddleCenterY){
+//            ((MovableGameObject)AIpaddle).move(0, diffToCenter/Math.abs(diffToCenter)*2);
+//            return;
+//        }
+
+
+
+
         //below center
         if (((int)ball.getRepresentable().getY()+ball.getRepresentable().getHeigth()/2) > AIpaddleCenterY){
-            ((MovableGameObject)AIpaddle).move(0, 3);
+            ((MovableGameObject)AIpaddle).move(0, 2);
 
         //above center
         } else{
-            ((MovableGameObject)AIpaddle).move(0, -3);
+            ((MovableGameObject)AIpaddle).move(0, -2);
         }
+
+        if (AIpaddleTopY <0){
+
+        }
+
+
 
 
     }

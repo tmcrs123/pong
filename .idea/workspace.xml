@@ -2,26 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88faa87e-198b-457e-ae63-83bfdbc57b9f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/myProjects/Interfaces/VerticalRepresentable.class" afterPath="$PROJECT_DIR$/out/production/myProjects/Interfaces/VerticalRepresentable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/myProjects/KeyboardController/KeyboardController.class" afterPath="$PROJECT_DIR$/out/production/myProjects/KeyboardController/KeyboardController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/myProjects/Pong.class" afterPath="$PROJECT_DIR$/out/production/myProjects/Pong.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/myProjects/SimpleGFX/SimpleGFXAIPaddle.class" afterPath="$PROJECT_DIR$/out/production/myProjects/SimpleGFX/SimpleGFXAIPaddle.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/myProjects/SimpleGFX/SimpleGFXBall.class" afterPath="$PROJECT_DIR$/out/production/myProjects/SimpleGFX/SimpleGFXBall.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/myProjects/SimpleGFX/SimpleGFXHumanPaddle.class" afterPath="$PROJECT_DIR$/out/production/myProjects/SimpleGFX/SimpleGFXHumanPaddle.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/myProjects/Tester.class" afterPath="$PROJECT_DIR$/out/production/myProjects/Tester.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/myProjects/gameObjects/Field.class" afterPath="$PROJECT_DIR$/out/production/myProjects/gameObjects/Field.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interfaces/Representable.java" afterPath="$PROJECT_DIR$/src/Interfaces/Representable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interfaces/VerticalRepresentable.java" afterPath="$PROJECT_DIR$/src/Interfaces/VerticalRepresentable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/KeyboardController/KeyboardController.java" afterPath="$PROJECT_DIR$/src/KeyboardController/KeyboardController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pong.java" afterPath="$PROJECT_DIR$/src/Pong.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SimpleGFX/SimpleGFXAIPaddle.java" afterPath="$PROJECT_DIR$/src/SimpleGFX/SimpleGFXAIPaddle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SimpleGFX/SimpleGFXBall.java" afterPath="$PROJECT_DIR$/src/SimpleGFX/SimpleGFXBall.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SimpleGFX/SimpleGFXField.java" afterPath="$PROJECT_DIR$/src/SimpleGFX/SimpleGFXField.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SimpleGFX/SimpleGFXHumanPaddle.java" afterPath="$PROJECT_DIR$/src/SimpleGFX/SimpleGFXHumanPaddle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tester.java" afterPath="$PROJECT_DIR$/src/Tester.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gameObjects/Field.java" afterPath="$PROJECT_DIR$/src/gameObjects/Field.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/myProjects$Main.coverage" NAME="Main Coverage Results" MODIFIED="1488320380410" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/myProjects$Main.coverage" NAME="Main Coverage Results" MODIFIED="1488930789235" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -56,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/src/Pong.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="290">
-              <caret line="175" column="19" lean-forward="false" selection-start-line="175" selection-start-column="19" selection-end-line="175" selection-end-column="19" />
+              <caret line="228" column="12" lean-forward="false" selection-start-line="228" selection-start-column="12" selection-end-line="228" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,31 +71,25 @@
       <file leaf-file-name="AIPaddle.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gameObjects/AIPaddle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+            <state relative-caret-position="120">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleGFXHumanPaddle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SimpleGFX/SimpleGFXHumanPaddle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-205">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimpleGFXField.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SimpleGFX/SimpleGFXField.java">
+      <file leaf-file-name="SimpleGFXAIPaddle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SimpleGFX/SimpleGFXAIPaddle.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
+              <caret line="33" column="21" lean-forward="false" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#954#955#0" expanded="true" />
+                <element signature="e#988#989#0" expanded="true" />
+                <element signature="e#1043#1044#0" expanded="true" />
+                <element signature="e#1089#1090#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,16 +113,6 @@
                 <element signature="e#441#442#0" expanded="true" />
                 <element signature="e#469#470#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimpleGFXRepresentableFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SimpleGFX/SimpleGFXRepresentableFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="24" column="62" lean-forward="false" selection-start-line="24" selection-start-column="62" selection-end-line="24" selection-end-column="62" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -187,7 +155,6 @@
         <option value="$PROJECT_DIR$/src/Interfaces/VerticalRepresentable.java" />
         <option value="$PROJECT_DIR$/src/SimpleGFX/SimpleGFXMovableRepresentable.java" />
         <option value="$PROJECT_DIR$/src/Tester.java" />
-        <option value="$PROJECT_DIR$/src/SimpleGFX/SimpleGFXAIPaddle.java" />
         <option value="$PROJECT_DIR$/src/Interfaces/MovableRepresentable.java" />
         <option value="$PROJECT_DIR$/src/SimpleGFX/SimpleGFXBall.java" />
         <option value="$PROJECT_DIR$/src/gameObjects/MovableGameObject.java" />
@@ -196,8 +163,9 @@
         <option value="$PROJECT_DIR$/src/gameObjects/Field.java" />
         <option value="$PROJECT_DIR$/src/SimpleGFX/SimpleGFXField.java" />
         <option value="$PROJECT_DIR$/src/SimpleGFX/SimpleGFXRepresentable.java" />
-        <option value="$PROJECT_DIR$/src/SimpleGFX/SimpleGFXHumanPaddle.java" />
         <option value="$PROJECT_DIR$/src/gameObjects/HumanPaddle.java" />
+        <option value="$PROJECT_DIR$/src/SimpleGFX/SimpleGFXAIPaddle.java" />
+        <option value="$PROJECT_DIR$/src/SimpleGFX/SimpleGFXHumanPaddle.java" />
         <option value="$PROJECT_DIR$/src/Pong.java" />
       </list>
     </option>
@@ -618,9 +586,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26438355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26438355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10547945" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37671232" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2463651" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -635,7 +604,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -959,16 +927,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SimpleGFX/SimpleGFXAIPaddle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SimpleGFX/SimpleGFXBall.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1073,21 +1031,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameObjects/AIPaddle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SimpleGFX/SimpleGFXHumanPaddle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-205">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="165">
+          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameObjects/AIPaddle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1099,10 +1057,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/SimpleGFX/SimpleGFXAIPaddle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="33" column="21" lean-forward="false" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#954#955#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1043#1044#0" expanded="true" />
+            <element signature="e#1089#1090#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Pong.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
-          <caret line="175" column="19" lean-forward="false" selection-start-line="175" selection-start-column="19" selection-end-line="175" selection-end-column="19" />
+          <caret line="228" column="12" lean-forward="false" selection-start-line="228" selection-start-column="12" selection-end-line="228" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

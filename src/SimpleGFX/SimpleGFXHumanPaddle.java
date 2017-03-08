@@ -13,8 +13,7 @@ public class SimpleGFXHumanPaddle extends SimpleGFXMovableRepresentable implemen
 
     private boolean movingUp = false;
     private boolean movingDown = false;
-    private boolean canMoveup;
-    private boolean canMovedown;
+
 
 
     public SimpleGFXHumanPaddle(int x, int y, int width, int height) {
